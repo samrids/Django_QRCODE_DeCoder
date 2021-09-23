@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <!-- semantic UI -->
+    <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+</head>
+
+<div class="ui secondary pointing menu">
+    <a href="" class="active item">
+    HOME
+    </a>
+    <a href="https://github.com/samrids" target="_new" class="item">
+    Github
+    </a>
+    <a href="https://www.youtube.com/channel/UCe0OD5nV5zkZtlDV848z8LA" target="_new" class="item">
+    Youbute
+    </a>
+    <a href="http://samrids.blogspot.com/" target="_new" class=" item">
+    Blog
+    </a>
+    <a href="http://awarasoft.com/" target="_new" class=" item">
+    Our Site
+    </a>
+  </div>
+    <body class="container-fluid"> 
+        <center class="row"> 
+            <div class="col-md-12"> 
+                <h1>Online QRCode Decoder</h1> 
+                <h3>A service to decode qrcodes...</h3>
+            </div>
+        </center> 
+    <div class="row">   
+<div><br></div>
+
+<!--Upload Form-->
+<div class="row">
+    <center class="row"> 
+        <div class="form-group">
+            <form>
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td colspan="2">Upload qrcode image: <input id="file" name="file" type="file" required/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Decode file"/> 
+                        </td>
+                    </tr>
+                    <tr><td colspan="2">
+                        Decode Text : <input type="text" style="width: 50em" name="edtDecodeText" id="edtDecodeText" readonly>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </center>
+  </body>
+
+<script src="/static/js/upload.js"></script>
+</html>
