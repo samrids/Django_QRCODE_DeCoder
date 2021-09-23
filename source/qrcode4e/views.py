@@ -7,7 +7,7 @@ from rest_framework.generics import ListAPIView
 import json
 
 from PIL import Image
-from pyzbar import pyzbar
+from pyzbar.pyzbar import decode
 import requests
 
 class ImageViewSet(ListAPIView):
@@ -20,7 +20,7 @@ class ImageViewSet(ListAPIView):
         url = '{0}{1}'.format('http://127.0.0.1:8000',image)
         
         img = Image.open(requests.get(url, stream=True).raw)
-        output = pyzbar.decode(img)
+        output = decode(img)
         image.decode_text = str(output[0].data.decode('UTF-8'))
         image.save()
         
