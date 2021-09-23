@@ -6,8 +6,6 @@ from django.http import HttpResponse
 from rest_framework.generics import ListAPIView
 import json
 
-from qrcode4e.forms import ImageForm
-
 from PIL import Image
 from pyzbar import pyzbar
 import requests
