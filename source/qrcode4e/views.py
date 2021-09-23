@@ -30,5 +30,4 @@ class ImageViewSet(ListAPIView):
 def image_upload_view(request):
     """Process images uploaded by users"""
     if request.method == 'GET':
-        form = ImageForm()
-    return render(request, 'index.html', {'form': form})
+        return render(request, 'index.html')
