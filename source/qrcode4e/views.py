@@ -11,7 +11,7 @@ from pyzbar.pyzbar import decode
 import requests
 
 class ImageViewSet(ListAPIView):
-    queryset = UserImg.objects.all()
+    # queryset = UserImg.objects.all()
     serializer_class = UserImgSerializer
 
     def post(self, request, *args, **kwargs):
